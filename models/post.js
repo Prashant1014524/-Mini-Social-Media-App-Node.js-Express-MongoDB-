@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const postSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "user"
+        ref: "user"   // ✅ FIXED
     },
     content: String,
     likes: [
@@ -12,7 +12,6 @@ const postSchema = mongoose.Schema({
             ref: "user"
         }
     ],
-    
     comments: [
         {
             user: {
